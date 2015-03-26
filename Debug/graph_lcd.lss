@@ -1,0 +1,719 @@
+
+graph_lcd.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000064a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000008  00800060  0000064a  000006be  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .stab         000012cc  00000000  00000000  000006c8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000da8  00000000  00000000  00001994  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .comment      00000011  00000000  00000000  0000273c  2**0
+                  CONTENTS, READONLY
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 bf 01 	jmp	0x37e	; 0x37e <__ctors_end>
+   4:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+   8:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+   c:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  10:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  14:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  18:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  1c:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  20:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  24:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  28:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  2c:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  30:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  34:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  38:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  3c:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  40:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  44:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  48:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  4c:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+  50:	0c 94 d4 01 	jmp	0x3a8	; 0x3a8 <__bad_interrupt>
+
+00000054 <font5x8>:
+  54:	00 00 00 00 00 00 00 5f 00 00 00 07 00 07 00 14     ......._........
+  64:	7f 14 7f 14 24 2a 7f 2a 12 23 13 08 64 62 36 49     ....$*.*.#..db6I
+  74:	55 22 50 00 05 03 00 00 00 1c 22 41 00 00 41 22     U"P......."A..A"
+  84:	1c 00 08 2a 1c 2a 08 08 08 3e 08 08 00 50 30 00     ...*.*...>...P0.
+  94:	00 08 08 08 08 08 00 60 60 00 00 20 10 08 04 02     .......``.. ....
+  a4:	3e 51 49 45 3e 00 42 7f 40 00 42 61 51 49 46 21     >QIE>.B.@.BaQIF!
+  b4:	41 45 4b 31 18 14 12 7f 10 27 45 45 45 39 3c 4a     AEK1.....'EEE9<J
+  c4:	49 49 30 01 71 09 05 03 36 49 49 49 36 06 49 49     II0.q...6III6.II
+  d4:	29 1e 00 36 36 00 00 00 56 36 00 00 00 08 14 22     )..66...V6....."
+  e4:	41 14 14 14 14 14 41 22 14 08 00 02 01 51 09 06     A.....A".....Q..
+  f4:	32 49 79 41 3e 7e 11 11 11 7e 7f 49 49 49 36 3e     2IyA>~...~.III6>
+ 104:	41 41 41 22 7f 41 41 22 1c 7f 49 49 49 41 7f 09     AAA".AA"..IIIA..
+ 114:	09 01 01 3e 41 41 51 32 7f 08 08 08 7f 00 41 7f     ...>AAQ2......A.
+ 124:	41 00 20 40 41 3f 01 7f 08 14 22 41 7f 40 40 40     A. @A?...."A.@@@
+ 134:	40 7f 02 04 02 7f 7f 04 08 10 7f 3e 41 41 41 3e     @..........>AAA>
+ 144:	7f 09 09 09 06 3e 41 51 21 5e 7f 09 19 29 46 46     .....>AQ!^...)FF
+ 154:	49 49 49 31 01 01 7f 01 01 3f 40 40 40 3f 1f 20     III1.....?@@@?. 
+ 164:	40 20 1f 7f 20 18 20 7f 63 14 08 14 63 03 04 78     @ .. . .c...c..x
+ 174:	04 03 61 51 49 45 43 00 00 7f 41 41 02 04 08 10     ..aQIEC...AA....
+ 184:	20 41 41 7f 00 00 04 02 01 02 04 40 40 40 40 40      AA........@@@@@
+ 194:	00 01 02 04 00 20 54 54 54 78 7f 48 44 44 38 38     ..... TTTx.HDD88
+ 1a4:	44 44 44 20 38 44 44 48 7f 38 54 54 54 18 08 7e     DDD 8DDH.8TTT..~
+ 1b4:	09 01 02 08 14 54 54 3c 7f 08 04 04 78 00 44 7d     .....TT<....x.D}
+ 1c4:	40 00 20 40 44 3d 00 00 7f 10 28 44 00 41 7f 40     @. @D=....(D.A.@
+ 1d4:	00 7c 04 18 04 78 7c 08 04 04 78 38 44 44 44 38     .|...x|...x8DDD8
+ 1e4:	7c 14 14 14 08 08 14 14 18 7c 7c 08 04 04 08 48     |........||....H
+ 1f4:	54 54 54 20 04 3f 44 40 20 3c 40 40 20 7c 1c 20     TTT .?D@ <@@ |. 
+ 204:	40 20 1c 3c 40 30 40 3c 44 28 10 28 44 0c 50 50     @ .<@0@<D(.(D.PP
+ 214:	50 3c 44 64 54 4c 44 00 08 36 41 00 00 00 7f 00     P<DdTLD..6A.....
+ 224:	00 00 41 36 08 00 08 08 2a 1c 08 08 1c 2a 08 08     ..A6....*....*..
+ 234:	7e 11 11 11 7e 7f 49 49 49 30 7f 49 49 49 36 7f     ~...~.III0.III6.
+ 244:	01 01 01 01 60 3e 21 3f 60 7f 49 49 49 41 67 18     ....`>!?`.IIIAg.
+ 254:	7f 18 67 22 41 49 49 36 7f 10 08 04 7f 7f 10 09     ..g"AII6........
+ 264:	04 7f 7f 08 14 22 41 40 3e 01 01 7e 7f 02 04 02     ....."A@>..~....
+ 274:	7f 7f 08 08 08 7f 3e 41 41 41 3e 7f 01 01 01 7f     ......>AAA>.....
+ 284:	7f 09 09 09 06 3e 41 41 41 22 01 01 7f 01 01 27     .....>AAA".....'
+ 294:	48 48 48 3f 1e 21 7f 21 1e 63 14 08 14 63 3f 20     HHH?.!.!.c...c? 
+ 2a4:	20 3f 40 1f 10 10 10 7f 7f 40 7f 40 7f 3f 20 3f      ?@......@.@.? ?
+ 2b4:	20 7f 01 7f 44 44 38 7f 44 7c 00 7f 7f 44 44 44      ...DD8.D|...DDD
+ 2c4:	38 22 41 49 49 3e 7f 08 7f 41 7f 46 29 19 09 7f     8"AII>...A.F)...
+ 2d4:	20 54 54 54 78 3c 4a 4a 4b 30 7c 54 54 58 20 7c      TTTx<JJK0|TTX |
+ 2e4:	04 04 04 04 60 38 24 3c 60 38 54 54 54 18 74 08     ....`8$<`8TTT.t.
+ 2f4:	7c 08 74 28 44 54 54 28 7c 20 10 08 7c 7c 21 12     |.t(DTT(| ..||!.
+ 304:	09 7c 7c 10 10 28 44 40 78 04 04 7c 7c 08 10 08     .||..(D@x..||...
+ 314:	7c 7c 10 10 10 7c 38 44 44 44 38 7c 04 04 04 7c     ||...|8DDD8|...|
+ 324:	7c 14 14 14 08 38 44 44 44 28 04 04 7c 04 04 0c     |....8DDD(..|...
+ 334:	50 50 50 3c 18 24 7c 24 18 44 28 10 28 44 3c 20     PPP<.$|$.D(.(D< 
+ 344:	20 3c 40 1c 20 20 20 7c 7c 40 7c 40 7c 3c 20 3c      <@.   ||@|@|< <
+ 354:	20 7c 04 7c 48 48 30 7c 48 48 30 7c 7c 48 48 48      |.|HH0|HH0||HHH
+ 364:	30 28 44 54 54 38 7c 38 44 44 38 48 34 14 14 7c     0(DTT8|8DD8H4..|
+ 374:	7e 4b 4a 4b 42 38 55 54 55 18                       ~KJKB8UTU.
+
+0000037e <__ctors_end>:
+ 37e:	11 24       	eor	r1, r1
+ 380:	1f be       	out	0x3f, r1	; 63
+ 382:	cf e5       	ldi	r28, 0x5F	; 95
+ 384:	d4 e0       	ldi	r29, 0x04	; 4
+ 386:	de bf       	out	0x3e, r29	; 62
+ 388:	cd bf       	out	0x3d, r28	; 61
+
+0000038a <__do_copy_data>:
+ 38a:	10 e0       	ldi	r17, 0x00	; 0
+ 38c:	a0 e6       	ldi	r26, 0x60	; 96
+ 38e:	b0 e0       	ldi	r27, 0x00	; 0
+ 390:	ea e4       	ldi	r30, 0x4A	; 74
+ 392:	f6 e0       	ldi	r31, 0x06	; 6
+ 394:	02 c0       	rjmp	.+4      	; 0x39a <__do_copy_data+0x10>
+ 396:	05 90       	lpm	r0, Z+
+ 398:	0d 92       	st	X+, r0
+ 39a:	a8 36       	cpi	r26, 0x68	; 104
+ 39c:	b1 07       	cpc	r27, r17
+ 39e:	d9 f7       	brne	.-10     	; 0x396 <__do_copy_data+0xc>
+ 3a0:	0e 94 e3 02 	call	0x5c6	; 0x5c6 <main>
+ 3a4:	0c 94 23 03 	jmp	0x646	; 0x646 <_exit>
+
+000003a8 <__bad_interrupt>:
+ 3a8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000003ac <WaitBisyFlag1>:
+ const uint8_t text[] = {"HELLOWE"};
+
+
+
+void WaitBisyFlag1 () {
+  uint8_t tmp = DataPort;
+ 3ac:	85 b3       	in	r24, 0x15	; 21
+  DataPort = 0;
+ 3ae:	15 ba       	out	0x15, r1	; 21
+  DDRDataPort = 0x00;
+ 3b0:	14 ba       	out	0x14, r1	; 20
+  Ctrl = (1<<RST) | (0 << RS) |
+ 3b2:	94 e7       	ldi	r25, 0x74	; 116
+ 3b4:	92 bb       	out	0x12, r25	; 18
+  (1 << RW) | (1 << CS1) | (0 << CS2) | (1 << E);
+  while (PINDataPort != 0) {
+ 3b6:	94 b3       	in	r25, 0x14	; 20
+ 3b8:	91 11       	cpse	r25, r1
+ 3ba:	fd cf       	rjmp	.-6      	; 0x3b6 <WaitBisyFlag1+0xa>
+
+  }
+
+  Ctrl = (1<<RST) | (0 << RS) |
+ 3bc:	9c e6       	ldi	r25, 0x6C	; 108
+ 3be:	92 bb       	out	0x12, r25	; 18
+  (1 << RW) | (0 << CS1) | (1 << CS2) | (1 << E);
+  while (PINDataPort != 0) {
+ 3c0:	94 b3       	in	r25, 0x14	; 20
+ 3c2:	91 11       	cpse	r25, r1
+ 3c4:	fd cf       	rjmp	.-6      	; 0x3c0 <WaitBisyFlag1+0x14>
+
+  }
+  Ctrl = (1<<RST) | (0 << RS) |
+ 3c6:	94 e0       	ldi	r25, 0x04	; 4
+ 3c8:	92 bb       	out	0x12, r25	; 18
+	  (0 << RW) | (0 << CS1) | (0 << CS2) | (0 << E);
+  DataPort = tmp;
+ 3ca:	85 bb       	out	0x15, r24	; 21
+  DDRDataPort = 0xFF;
+ 3cc:	8f ef       	ldi	r24, 0xFF	; 255
+ 3ce:	84 bb       	out	0x14, r24	; 20
+ 3d0:	08 95       	ret
+
+000003d2 <LCDReset>:
+}
+
+// Reset function for LCD, using !RST pin
+void LCDReset () {
+
+	Ctrl |= 0 << RST;
+ 3d2:	82 b3       	in	r24, 0x12	; 18
+ 3d4:	82 bb       	out	0x12, r24	; 18
+	WaitBisyFlag1 ();
+ 3d6:	0e 94 d6 01 	call	0x3ac	; 0x3ac <WaitBisyFlag1>
+	Ctrl |= 1 << RST;
+ 3da:	92 9a       	sbi	0x12, 2	; 18
+	WaitBisyFlag1 ();
+ 3dc:	0c 94 d6 01 	jmp	0x3ac	; 0x3ac <WaitBisyFlag1>
+
+000003e0 <LCDOnOff>:
+}
+
+// Function wich enables or disables image on LCD display
+void LCDOnOff (unsigned char State)	{
+ 3e0:	cf 93       	push	r28
+ 3e2:	df 93       	push	r29
+ 3e4:	1f 92       	push	r1
+ 3e6:	cd b7       	in	r28, 0x3d	; 61
+ 3e8:	de b7       	in	r29, 0x3e	; 62
+
+	WaitBisyFlag1 ();
+ 3ea:	89 83       	std	Y+1, r24	; 0x01
+ 3ec:	0e 94 d6 01 	call	0x3ac	; 0x3ac <WaitBisyFlag1>
+	Ctrl = (1<<RST) | (0 << RS) |
+ 3f0:	9c e1       	ldi	r25, 0x1C	; 28
+ 3f2:	92 bb       	out	0x12, r25	; 18
+	(0 << RW) | (1 << CS1) | (1 << CS2) | (0 << E);
+	DataPort = (0b11111 << 1) | (State<<0);
+ 3f4:	89 81       	ldd	r24, Y+1	; 0x01
+ 3f6:	8e 63       	ori	r24, 0x3E	; 62
+ 3f8:	85 bb       	out	0x15, r24	; 21
+	Ctrl |= (1 << E);
+ 3fa:	95 9a       	sbi	0x12, 5	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 3fc:	83 e0       	ldi	r24, 0x03	; 3
+ 3fe:	8a 95       	dec	r24
+ 400:	f1 f7       	brne	.-4      	; 0x3fe <LCDOnOff+0x1e>
+ 402:	00 00       	nop
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+ 404:	95 98       	cbi	0x12, 5	; 18
+	WaitBisyFlag1 ();
+}
+ 406:	0f 90       	pop	r0
+ 408:	df 91       	pop	r29
+ 40a:	cf 91       	pop	r28
+	(0 << RW) | (1 << CS1) | (1 << CS2) | (0 << E);
+	DataPort = (0b11111 << 1) | (State<<0);
+	Ctrl |= (1 << E);
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+	WaitBisyFlag1 ();
+ 40c:	0c 94 d6 01 	jmp	0x3ac	; 0x3ac <WaitBisyFlag1>
+
+00000410 <LCDSetPage>:
+}
+
+
+
+// Function wich sets number of page for LCD
+void LCDSetPage (uint8_t Page) {
+ 410:	cf 93       	push	r28
+ 412:	df 93       	push	r29
+ 414:	1f 92       	push	r1
+ 416:	cd b7       	in	r28, 0x3d	; 61
+ 418:	de b7       	in	r29, 0x3e	; 62
+
+// Page value is 3-bit, range checking
+	if (Page > 7) {
+ 41a:	88 30       	cpi	r24, 0x08	; 8
+ 41c:	08 f0       	brcs	.+2      	; 0x420 <LCDSetPage+0x10>
+		Page &= ~(0b111);
+ 41e:	88 7f       	andi	r24, 0xF8	; 248
+	}
+
+	WaitBisyFlag1 ();
+ 420:	89 83       	std	Y+1, r24	; 0x01
+ 422:	0e 94 d6 01 	call	0x3ac	; 0x3ac <WaitBisyFlag1>
+	Ctrl = (1<<RST) | (0 << RS) |
+ 426:	9c e1       	ldi	r25, 0x1C	; 28
+ 428:	92 bb       	out	0x12, r25	; 18
+	(0 << RW)
+	| (1 << CS1) | (1 << CS2) | (0 << E);
+	DataPort = (0b10111 << 3) | (Page);
+ 42a:	89 81       	ldd	r24, Y+1	; 0x01
+ 42c:	88 6b       	ori	r24, 0xB8	; 184
+ 42e:	85 bb       	out	0x15, r24	; 21
+	Ctrl |= (1 << E);
+ 430:	95 9a       	sbi	0x12, 5	; 18
+ 432:	83 e0       	ldi	r24, 0x03	; 3
+ 434:	8a 95       	dec	r24
+ 436:	f1 f7       	brne	.-4      	; 0x434 <LCDSetPage+0x24>
+ 438:	00 00       	nop
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+ 43a:	95 98       	cbi	0x12, 5	; 18
+	WaitBisyFlag1 ();
+}
+ 43c:	0f 90       	pop	r0
+ 43e:	df 91       	pop	r29
+ 440:	cf 91       	pop	r28
+	| (1 << CS1) | (1 << CS2) | (0 << E);
+	DataPort = (0b10111 << 3) | (Page);
+	Ctrl |= (1 << E);
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+	WaitBisyFlag1 ();
+ 442:	0c 94 d6 01 	jmp	0x3ac	; 0x3ac <WaitBisyFlag1>
+
+00000446 <LCDSetColumn>:
+}
+
+
+void LCDSetColumn (uint8_t Column) {
+ 446:	cf 93       	push	r28
+ 448:	df 93       	push	r29
+ 44a:	1f 92       	push	r1
+ 44c:	cd b7       	in	r28, 0x3d	; 61
+ 44e:	de b7       	in	r29, 0x3e	; 62
+
+	WaitBisyFlag1 ();
+ 450:	89 83       	std	Y+1, r24	; 0x01
+ 452:	0e 94 d6 01 	call	0x3ac	; 0x3ac <WaitBisyFlag1>
+	Ctrl = (1<<RST) | (0 << RS) |
+ 456:	9c e1       	ldi	r25, 0x1C	; 28
+ 458:	92 bb       	out	0x12, r25	; 18
+	(0 << RW) | (1 << CS1) | (1 << CS2) | (0 << E);
+	DataPort = (0b01 << 6) | (Column);
+ 45a:	89 81       	ldd	r24, Y+1	; 0x01
+ 45c:	80 64       	ori	r24, 0x40	; 64
+ 45e:	85 bb       	out	0x15, r24	; 21
+	Ctrl |= (1 << E);
+ 460:	95 9a       	sbi	0x12, 5	; 18
+ 462:	83 e0       	ldi	r24, 0x03	; 3
+ 464:	8a 95       	dec	r24
+ 466:	f1 f7       	brne	.-4      	; 0x464 <__stack+0x5>
+ 468:	00 00       	nop
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+ 46a:	95 98       	cbi	0x12, 5	; 18
+	WaitBisyFlag1 ();
+}
+ 46c:	0f 90       	pop	r0
+ 46e:	df 91       	pop	r29
+ 470:	cf 91       	pop	r28
+	(0 << RW) | (1 << CS1) | (1 << CS2) | (0 << E);
+	DataPort = (0b01 << 6) | (Column);
+	Ctrl |= (1 << E);
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+	WaitBisyFlag1 ();
+ 472:	0c 94 d6 01 	jmp	0x3ac	; 0x3ac <WaitBisyFlag1>
+
+00000476 <LCDWriteData>:
+}
+
+void LCDWriteData (uint8_t Data, uint8_t X, uint8_t Y) {
+ 476:	ff 92       	push	r15
+ 478:	0f 93       	push	r16
+ 47a:	1f 93       	push	r17
+ 47c:	cf 93       	push	r28
+ 47e:	df 93       	push	r29
+ 480:	1f 92       	push	r1
+ 482:	cd b7       	in	r28, 0x3d	; 61
+ 484:	de b7       	in	r29, 0x3e	; 62
+ 486:	18 2f       	mov	r17, r24
+	uint8_t cs1mask = 0;
+	uint8_t cs2mask = 0;
+	if (X > 63 && X < 128) cs2mask = 1;
+ 488:	80 ec       	ldi	r24, 0xC0	; 192
+ 48a:	86 0f       	add	r24, r22
+ 48c:	80 34       	cpi	r24, 0x40	; 64
+ 48e:	18 f4       	brcc	.+6      	; 0x496 <LCDWriteData+0x20>
+ 490:	01 e0       	ldi	r16, 0x01	; 1
+	Ctrl &= ~(1 << E);
+	WaitBisyFlag1 ();
+}
+
+void LCDWriteData (uint8_t Data, uint8_t X, uint8_t Y) {
+	uint8_t cs1mask = 0;
+ 492:	f1 2c       	mov	r15, r1
+ 494:	03 c0       	rjmp	.+6      	; 0x49c <LCDWriteData+0x26>
+	uint8_t cs2mask = 0;
+ 496:	00 e0       	ldi	r16, 0x00	; 0
+	if (X > 63 && X < 128) cs2mask = 1;
+	else  cs1mask = 1;
+ 498:	ff 24       	eor	r15, r15
+ 49a:	f3 94       	inc	r15
+
+	LCDSetColumn (X);
+ 49c:	86 2f       	mov	r24, r22
+ 49e:	49 83       	std	Y+1, r20	; 0x01
+ 4a0:	0e 94 23 02 	call	0x446	; 0x446 <LCDSetColumn>
+	LCDSetPage (Y);
+ 4a4:	49 81       	ldd	r20, Y+1	; 0x01
+ 4a6:	84 2f       	mov	r24, r20
+ 4a8:	0e 94 08 02 	call	0x410	; 0x410 <LCDSetPage>
+	WaitBisyFlag1 ();
+ 4ac:	0e 94 d6 01 	call	0x3ac	; 0x3ac <WaitBisyFlag1>
+	Ctrl = (1<<RST) | (1 << RS) |
+	(0 << RW) | (0 << E) | (cs1mask <<CS1) | (cs2mask <<CS2);
+ 4b0:	f2 94       	swap	r15
+ 4b2:	80 ef       	ldi	r24, 0xF0	; 240
+ 4b4:	f8 22       	and	r15, r24
+ 4b6:	90 2f       	mov	r25, r16
+ 4b8:	99 0f       	add	r25, r25
+ 4ba:	99 0f       	add	r25, r25
+ 4bc:	99 0f       	add	r25, r25
+	else  cs1mask = 1;
+
+	LCDSetColumn (X);
+	LCDSetPage (Y);
+	WaitBisyFlag1 ();
+	Ctrl = (1<<RST) | (1 << RS) |
+ 4be:	9f 29       	or	r25, r15
+ 4c0:	94 68       	ori	r25, 0x84	; 132
+ 4c2:	92 bb       	out	0x12, r25	; 18
+	(0 << RW) | (0 << E) | (cs1mask <<CS1) | (cs2mask <<CS2);
+	DataPort = Data;
+ 4c4:	15 bb       	out	0x15, r17	; 21
+	Ctrl |= (1 << E);
+ 4c6:	95 9a       	sbi	0x12, 5	; 18
+ 4c8:	83 e0       	ldi	r24, 0x03	; 3
+ 4ca:	8a 95       	dec	r24
+ 4cc:	f1 f7       	brne	.-4      	; 0x4ca <LCDWriteData+0x54>
+ 4ce:	00 00       	nop
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+ 4d0:	95 98       	cbi	0x12, 5	; 18
+	WaitBisyFlag1 ();
+}
+ 4d2:	0f 90       	pop	r0
+ 4d4:	df 91       	pop	r29
+ 4d6:	cf 91       	pop	r28
+ 4d8:	1f 91       	pop	r17
+ 4da:	0f 91       	pop	r16
+ 4dc:	ff 90       	pop	r15
+	(0 << RW) | (0 << E) | (cs1mask <<CS1) | (cs2mask <<CS2);
+	DataPort = Data;
+	Ctrl |= (1 << E);
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+	WaitBisyFlag1 ();
+ 4de:	0c 94 d6 01 	jmp	0x3ac	; 0x3ac <WaitBisyFlag1>
+
+000004e2 <LCDWriteDataDual>:
+}
+
+void LCDWriteDataDual (uint8_t Data) {
+ 4e2:	cf 93       	push	r28
+ 4e4:	df 93       	push	r29
+ 4e6:	1f 92       	push	r1
+ 4e8:	cd b7       	in	r28, 0x3d	; 61
+ 4ea:	de b7       	in	r29, 0x3e	; 62
+
+	WaitBisyFlag1 ();
+ 4ec:	89 83       	std	Y+1, r24	; 0x01
+ 4ee:	0e 94 d6 01 	call	0x3ac	; 0x3ac <WaitBisyFlag1>
+	Ctrl = (1<<RST) | (1 << RS) |
+ 4f2:	9c e9       	ldi	r25, 0x9C	; 156
+ 4f4:	92 bb       	out	0x12, r25	; 18
+	(0 << RW) | (0 << E) | (1<<CS1) | (1 <<CS2);
+	DataPort = Data;
+ 4f6:	89 81       	ldd	r24, Y+1	; 0x01
+ 4f8:	85 bb       	out	0x15, r24	; 21
+	Ctrl |= (1 << E);
+ 4fa:	95 9a       	sbi	0x12, 5	; 18
+ 4fc:	83 e0       	ldi	r24, 0x03	; 3
+ 4fe:	8a 95       	dec	r24
+ 500:	f1 f7       	brne	.-4      	; 0x4fe <LCDWriteDataDual+0x1c>
+ 502:	00 00       	nop
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+ 504:	95 98       	cbi	0x12, 5	; 18
+	WaitBisyFlag1 ();
+}
+ 506:	0f 90       	pop	r0
+ 508:	df 91       	pop	r29
+ 50a:	cf 91       	pop	r28
+	(0 << RW) | (0 << E) | (1<<CS1) | (1 <<CS2);
+	DataPort = Data;
+	Ctrl |= (1 << E);
+	_delay_us (10);
+	Ctrl &= ~(1 << E);
+	WaitBisyFlag1 ();
+ 50c:	0c 94 d6 01 	jmp	0x3ac	; 0x3ac <WaitBisyFlag1>
+
+00000510 <LCDClear>:
+}
+
+
+void LCDClear () {
+ 510:	cf 93       	push	r28
+ 512:	df 93       	push	r29
+  LCDOnOff (off);
+ 514:	80 e0       	ldi	r24, 0x00	; 0
+ 516:	0e 94 f0 01 	call	0x3e0	; 0x3e0 <LCDOnOff>
+  for (uint8_t j = 0; j < 8; j++) {
+ 51a:	c0 e0       	ldi	r28, 0x00	; 0
+	LCDSetPage (j);
+ 51c:	8c 2f       	mov	r24, r28
+ 51e:	0e 94 08 02 	call	0x410	; 0x410 <LCDSetPage>
+	for (uint8_t i = 0; i < 64; i++) {
+ 522:	d0 e0       	ldi	r29, 0x00	; 0
+      LCDSetColumn (i);
+ 524:	8d 2f       	mov	r24, r29
+ 526:	0e 94 23 02 	call	0x446	; 0x446 <LCDSetColumn>
+	  LCDWriteDataDual (0);
+ 52a:	80 e0       	ldi	r24, 0x00	; 0
+ 52c:	0e 94 71 02 	call	0x4e2	; 0x4e2 <LCDWriteDataDual>
+
+void LCDClear () {
+  LCDOnOff (off);
+  for (uint8_t j = 0; j < 8; j++) {
+	LCDSetPage (j);
+	for (uint8_t i = 0; i < 64; i++) {
+ 530:	df 5f       	subi	r29, 0xFF	; 255
+ 532:	d0 34       	cpi	r29, 0x40	; 64
+ 534:	b9 f7       	brne	.-18     	; 0x524 <LCDClear+0x14>
+}
+
+
+void LCDClear () {
+  LCDOnOff (off);
+  for (uint8_t j = 0; j < 8; j++) {
+ 536:	cf 5f       	subi	r28, 0xFF	; 255
+ 538:	c8 30       	cpi	r28, 0x08	; 8
+ 53a:	81 f7       	brne	.-32     	; 0x51c <LCDClear+0xc>
+	for (uint8_t i = 0; i < 64; i++) {
+      LCDSetColumn (i);
+	  LCDWriteDataDual (0);
+    }
+  }
+  LCDOnOff (on);
+ 53c:	81 e0       	ldi	r24, 0x01	; 1
+}
+ 53e:	df 91       	pop	r29
+ 540:	cf 91       	pop	r28
+	for (uint8_t i = 0; i < 64; i++) {
+      LCDSetColumn (i);
+	  LCDWriteDataDual (0);
+    }
+  }
+  LCDOnOff (on);
+ 542:	0c 94 f0 01 	jmp	0x3e0	; 0x3e0 <LCDOnOff>
+
+00000546 <LCDprint>:
+}
+
+void LCDprint (const uint8_t *str, uint8_t str_size, uint8_t X_coord, uint8_t Y_coord) {
+ 546:	af 92       	push	r10
+ 548:	bf 92       	push	r11
+ 54a:	cf 92       	push	r12
+ 54c:	df 92       	push	r13
+ 54e:	ef 92       	push	r14
+ 550:	ff 92       	push	r15
+ 552:	0f 93       	push	r16
+ 554:	1f 93       	push	r17
+ 556:	cf 93       	push	r28
+ 558:	df 93       	push	r29
+ 55a:	b6 2e       	mov	r11, r22
+ 55c:	d4 2e       	mov	r13, r20
+ 55e:	c2 2e       	mov	r12, r18
+ 560:	a8 2e       	mov	r10, r24
+
+	// для i-ого символа строки читаем их памчти 5 столбцов фонта,
+	//шестой - пустой столбец, чтобы буквы не слипались
+	// Печатаем столбцы
+
+	for (uint8_t i = 0; i < str_size; i++) {
+ 562:	ec 01       	movw	r28, r24
+ 564:	8c 2f       	mov	r24, r28
+ 566:	8a 19       	sub	r24, r10
+ 568:	8b 15       	cp	r24, r11
+ 56a:	10 f5       	brcc	.+68     	; 0x5b0 <LCDprint+0x6a>
+
+		uint16_t Fnt_col =  *(str) * 5;	// Извлекаем из памяти программ следующий символ
+ 56c:	e9 90       	ld	r14, Y+
+ 56e:	85 e0       	ldi	r24, 0x05	; 5
+ 570:	e8 9e       	mul	r14, r24
+ 572:	70 01       	movw	r14, r0
+ 574:	11 24       	eor	r1, r1
+ 576:	00 e0       	ldi	r16, 0x00	; 0
+ 578:	10 e0       	ldi	r17, 0x00	; 0
+ 57a:	c7 01       	movw	r24, r14
+ 57c:	8c 5a       	subi	r24, 0xAC	; 172
+ 57e:	9f 4f       	sbci	r25, 0xFF	; 255
+ 580:	7c 01       	movw	r14, r24
+ 582:	f7 01       	movw	r30, r14
+ 584:	e0 0f       	add	r30, r16
+ 586:	f1 1f       	adc	r31, r17
+
+		for (uint8_t j = 0; j < 5; j++) {
+
+			LCDWriteData ( pgm_read_byte( &font5x8[Fnt_col]) , X_coord, Y_coord);
+ 588:	84 91       	lpm	r24, Z
+ 58a:	6d 2d       	mov	r22, r13
+ 58c:	60 0f       	add	r22, r16
+ 58e:	4c 2d       	mov	r20, r12
+ 590:	0e 94 3b 02 	call	0x476	; 0x476 <LCDWriteData>
+ 594:	0f 5f       	subi	r16, 0xFF	; 255
+ 596:	1f 4f       	sbci	r17, 0xFF	; 255
+
+	for (uint8_t i = 0; i < str_size; i++) {
+
+		uint16_t Fnt_col =  *(str) * 5;	// Извлекаем из памяти программ следующий символ
+
+		for (uint8_t j = 0; j < 5; j++) {
+ 598:	05 30       	cpi	r16, 0x05	; 5
+ 59a:	11 05       	cpc	r17, r1
+ 59c:	91 f7       	brne	.-28     	; 0x582 <LCDprint+0x3c>
+ 59e:	65 e0       	ldi	r22, 0x05	; 5
+ 5a0:	6d 0d       	add	r22, r13
+
+			LCDWriteData ( pgm_read_byte( &font5x8[Fnt_col]) , X_coord, Y_coord);
+			Fnt_col++;		//
+			X_coord++;
+		}
+		LCDWriteData (0, X_coord, Y_coord);
+ 5a2:	4c 2d       	mov	r20, r12
+ 5a4:	80 e0       	ldi	r24, 0x00	; 0
+ 5a6:	0e 94 3b 02 	call	0x476	; 0x476 <LCDWriteData>
+		//if ($str + 1
+		X_coord++;
+ 5aa:	96 e0       	ldi	r25, 0x06	; 6
+ 5ac:	d9 0e       	add	r13, r25
+ 5ae:	da cf       	rjmp	.-76     	; 0x564 <LCDprint+0x1e>
+		str++;
+	}
+
+
+}
+ 5b0:	df 91       	pop	r29
+ 5b2:	cf 91       	pop	r28
+ 5b4:	1f 91       	pop	r17
+ 5b6:	0f 91       	pop	r16
+ 5b8:	ff 90       	pop	r15
+ 5ba:	ef 90       	pop	r14
+ 5bc:	df 90       	pop	r13
+ 5be:	cf 90       	pop	r12
+ 5c0:	bf 90       	pop	r11
+ 5c2:	af 90       	pop	r10
+ 5c4:	08 95       	ret
+
+000005c6 <main>:
+int main (void) {
+
+//uint8_t tmp = 0;
+
+// Port initialisation
+	DataPort = 0;
+ 5c6:	15 ba       	out	0x15, r1	; 21
+	Ctrl = 0;
+ 5c8:	12 ba       	out	0x12, r1	; 18
+	DDRDataPort = 0xFF;
+ 5ca:	8f ef       	ldi	r24, 0xFF	; 255
+ 5cc:	84 bb       	out	0x14, r24	; 20
+	DDRCtrl = 0xFF;
+ 5ce:	81 bb       	out	0x11, r24	; 17
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 5d0:	2f e3       	ldi	r18, 0x3F	; 63
+ 5d2:	8d e0       	ldi	r24, 0x0D	; 13
+ 5d4:	93 e0       	ldi	r25, 0x03	; 3
+ 5d6:	21 50       	subi	r18, 0x01	; 1
+ 5d8:	80 40       	sbci	r24, 0x00	; 0
+ 5da:	90 40       	sbci	r25, 0x00	; 0
+ 5dc:	e1 f7       	brne	.-8      	; 0x5d6 <main+0x10>
+ 5de:	00 c0       	rjmp	.+0      	; 0x5e0 <main+0x1a>
+ 5e0:	00 00       	nop
+
+
+
+// LCD initialisation
+	_delay_ms (1000);
+	LCDReset ();
+ 5e2:	0e 94 e9 01 	call	0x3d2	; 0x3d2 <LCDReset>
+	LCDOnOff (on);
+ 5e6:	81 e0       	ldi	r24, 0x01	; 1
+ 5e8:	0e 94 f0 01 	call	0x3e0	; 0x3e0 <LCDOnOff>
+	LCDClear ();
+ 5ec:	0e 94 88 02 	call	0x510	; 0x510 <LCDClear>
+
+
+	LCDprint (text, sizeof(text), 2, 4);
+ 5f0:	24 e0       	ldi	r18, 0x04	; 4
+ 5f2:	42 e0       	ldi	r20, 0x02	; 2
+ 5f4:	68 e0       	ldi	r22, 0x08	; 8
+ 5f6:	80 e6       	ldi	r24, 0x60	; 96
+ 5f8:	90 e0       	ldi	r25, 0x00	; 0
+ 5fa:	0e 94 a3 02 	call	0x546	; 0x546 <LCDprint>
+ 5fe:	2f e3       	ldi	r18, 0x3F	; 63
+ 600:	8d e0       	ldi	r24, 0x0D	; 13
+ 602:	93 e0       	ldi	r25, 0x03	; 3
+ 604:	21 50       	subi	r18, 0x01	; 1
+ 606:	80 40       	sbci	r24, 0x00	; 0
+ 608:	90 40       	sbci	r25, 0x00	; 0
+ 60a:	e1 f7       	brne	.-8      	; 0x604 <main+0x3e>
+ 60c:	00 c0       	rjmp	.+0      	; 0x60e <main+0x48>
+ 60e:	00 00       	nop
+
+		}*/
+	_delay_ms (1000);
+
+	while (1) {
+      LCDWriteData (0, 0, 1);
+ 610:	41 e0       	ldi	r20, 0x01	; 1
+ 612:	60 e0       	ldi	r22, 0x00	; 0
+ 614:	80 e0       	ldi	r24, 0x00	; 0
+ 616:	0e 94 3b 02 	call	0x476	; 0x476 <LCDWriteData>
+ 61a:	2f e9       	ldi	r18, 0x9F	; 159
+ 61c:	86 e8       	ldi	r24, 0x86	; 134
+ 61e:	91 e0       	ldi	r25, 0x01	; 1
+ 620:	21 50       	subi	r18, 0x01	; 1
+ 622:	80 40       	sbci	r24, 0x00	; 0
+ 624:	90 40       	sbci	r25, 0x00	; 0
+ 626:	e1 f7       	brne	.-8      	; 0x620 <main+0x5a>
+ 628:	00 c0       	rjmp	.+0      	; 0x62a <main+0x64>
+ 62a:	00 00       	nop
+	  _delay_ms (500);
+      LCDWriteData (127, 0, 1);
+ 62c:	41 e0       	ldi	r20, 0x01	; 1
+ 62e:	60 e0       	ldi	r22, 0x00	; 0
+ 630:	8f e7       	ldi	r24, 0x7F	; 127
+ 632:	0e 94 3b 02 	call	0x476	; 0x476 <LCDWriteData>
+ 636:	2f e9       	ldi	r18, 0x9F	; 159
+ 638:	86 e8       	ldi	r24, 0x86	; 134
+ 63a:	91 e0       	ldi	r25, 0x01	; 1
+ 63c:	21 50       	subi	r18, 0x01	; 1
+ 63e:	80 40       	sbci	r24, 0x00	; 0
+ 640:	90 40       	sbci	r25, 0x00	; 0
+ 642:	e1 f7       	brne	.-8      	; 0x63c <main+0x76>
+ 644:	e3 cf       	rjmp	.-58     	; 0x60c <main+0x46>
+
+00000646 <_exit>:
+ 646:	f8 94       	cli
+
+00000648 <__stop_program>:
+ 648:	ff cf       	rjmp	.-2      	; 0x648 <__stop_program>
