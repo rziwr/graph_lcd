@@ -204,7 +204,7 @@ static const PROGMEM uint8_t  font5x8[]  = {
 		0x38, 0x55, 0x54, 0x55, 0x18,//
 
 };
- const uint8_t PROGMEM text[] = {"®бана€ ’”…Ќя: теперь на русском!\0"};
+ const uint8_t PROGMEM text[] = {"®бана€ ’”…Ќя: теперь на русскомvмм!\0"};
  const uint8_t PROGMEM myString[] = "јЅ¬√ƒ≈∆«»… ЋћЌќѕ–—“”‘’÷„ЎўЏџ№Ёёяабвгдежзийклмнопрстуфхцчшщъыьэю€";
 
 
